@@ -4,6 +4,7 @@ import 'package:flutter_test_app/domain/bloc/matrix_cubit.dart';
 import 'package:flutter_test_app/presentation/widgets/matrix/floating_matrix_button.dart';
 import 'package:flutter_test_app/presentation/widgets/matrix/matrix_text_field.dart';
 import 'package:flutter_test_app/presentation/widgets/matrix/matrix_widget.dart';
+import 'package:flutter_test_app/presentation/widgets/output_text_field.dart';
 
 class HomeScreen extends StatelessWidget {
   final MatrixCubit _matrixCubit = MatrixCubit();
@@ -24,6 +25,8 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               MatrixTextField(),
+              SizedBox(height: 15),
+              OutputTextField(),
               SizedBox(height: 15),
               MatrixWidget(),
             ],

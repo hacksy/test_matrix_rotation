@@ -25,7 +25,11 @@ class MatrixWidget extends StatelessWidget {
             break;
           case MatrixStatus.empty:
           default:
-            return Container();
+            return Container(
+              child: Center(
+                child: Text("Ingrese su matriz"),
+              ),
+            );
             break;
         }
       },

@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         height: size.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextField(),
             SizedBox(height: 15),

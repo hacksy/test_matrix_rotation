@@ -11,7 +11,8 @@ class MatrixWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     //Lets validate that I have n x n items, otherwise , show an error message
     if (sqrt(items.length).ceilToDouble() ==
-        sqrt(items.length).floorToDouble()) {
+            sqrt(items.length).floorToDouble() &&
+        items.length > 0) {
       return _ValidMatrixWidget(items: items);
     } else {
       return _InvalidMatrixWidget();

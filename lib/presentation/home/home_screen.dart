@@ -5,7 +5,6 @@ import 'package:flutter_test_app/presentation/widgets/matrix/matrix_text_field.d
 import 'package:flutter_test_app/presentation/widgets/matrix/matrix_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-  final items = List<String>.generate(81, (int index) => "${index + 1}");
   final MatrixCubit _matrixCubit = MatrixCubit();
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               MatrixTextField(),
               SizedBox(height: 15),
-              MatrixWidget(items: items),
+              MatrixWidget(),
             ],
           ),
         ),

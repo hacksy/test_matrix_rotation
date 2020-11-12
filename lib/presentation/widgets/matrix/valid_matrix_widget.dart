@@ -7,12 +7,11 @@ class _ValidMatrixWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     var squaredSize = sqrt(items.length).floor();
     return Container(
-      width: MediaQuery.of(context).size.width / (squaredSize - 1),
       child: GridView.builder(
         shrinkWrap: true,
-        itemCount: squaredSize,
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        itemCount: items.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: squaredSize),
         itemBuilder: (BuildContext context, int pos) {
           return Container(
             height: 35,

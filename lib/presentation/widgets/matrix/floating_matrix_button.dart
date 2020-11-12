@@ -10,7 +10,7 @@ class FloatingMatrixButton extends StatelessWidget {
       return FloatingActionButton(
         onPressed: state.status == MatrixStatus.valid
             ? () {
-                BlocProvider.of<MatrixCubit>(context).rotate();
+                BlocProvider.of<MatrixCubit>(context).counterRotate();
               }
             : null,
         child: Icon(Icons.rotate_90_degrees_ccw),

@@ -10,13 +10,16 @@ class MatrixCubit extends Cubit<MatrixState> {
       emit(MatrixState.invalid());
       return;
     }
-
     var currentState = MatrixState.valid(matrix);
     emit(currentState);
   }
 
-  void rotate() {}
-  void counterRotate() {}
+  void rotate() {
+    //We consider that matrix is valid
+  }
+  void counterRotate() {
+    //We consider that matrix is valid
+  }
 
   //These functions will probably need to be on an util file
   //Currently here b/c is not used anywhere else

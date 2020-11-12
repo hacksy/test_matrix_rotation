@@ -8,9 +8,10 @@ class _ValidMatrixWidget extends StatelessWidget {
     var squaredSize = sqrt(items.length).floor();
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height / 2,
       width: size.width,
+      height: size.height * 2 / 3,
       child: GridView.builder(
+        shrinkWrap: true,
         itemCount: items.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: squaredSize),

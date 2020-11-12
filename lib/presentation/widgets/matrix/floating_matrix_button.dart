@@ -7,13 +7,26 @@ class FloatingMatrixButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MatrixCubit, MatrixState>(
         builder: (BuildContext context, MatrixState state) {
-      return FloatingActionButton(
-        onPressed: state.status == MatrixStatus.valid
-            ? () {
-                BlocProvider.of<MatrixCubit>(context).counterRotate();
-              }
-            : null,
-        child: Icon(Icons.rotate_90_degrees_ccw),
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: state.status == MatrixStatus.valid
+                ? () {
+                    BlocProvider.of<MatrixCubit>(context).counterRotate();
+                  }
+                : null,
+            child: Icon(Icons.rotate_left),
+          ),
+          SizedBox(height: 15),
+          FloatingActionButton(
+              onPressed: state.status == MatrixStatus.valid
+                  ? () {
+                      BlocProvider.of<MatrixCubit>(context).rotate();
+                    }
+                  : null,
+              child: Icon(Icons.rotate_right)),
+        ],
       );
     });
   }

@@ -5,7 +5,9 @@ part 'matrix_state.dart';
 class MatrixCubit extends Cubit<MatrixState> {
   MatrixCubit() : super(MatrixState.empty());
   List<String> matrix = [];
-  void updateInput(String input) {}
+  void updateInput(String input) {
+    print(input);
+  }
 
   void rotate() {}
   void counterRotate() {}

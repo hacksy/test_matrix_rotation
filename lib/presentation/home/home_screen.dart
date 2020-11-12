@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test_app/domain/bloc/matrix_cubit.dart';
+import 'package:flutter_test_app/presentation/widgets/matrix/floating_matrix_button.dart';
 import 'package:flutter_test_app/presentation/widgets/matrix/matrix_text_field.dart';
 import 'package:flutter_test_app/presentation/widgets/matrix/matrix_widget.dart';
 
@@ -28,10 +29,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.rotate_90_degrees_ccw),
-        ),
+        floatingActionButton: FloatingMatrixButton(),
       ),
     );
   }
